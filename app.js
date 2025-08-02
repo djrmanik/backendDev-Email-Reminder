@@ -15,10 +15,10 @@ app.use(cookieParser()); // reads cookies from incoming request to store user da
 
 
 app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/user', userRouter);
+app.use('/api/v1/users', userRouter);
 app.use('/api/v1/subscriptions', subscriptionRouter);
 
-app.user(errorMiddleware);
+app.use(errorMiddleware);
 
 
 app.get('/', (req, res) => {
